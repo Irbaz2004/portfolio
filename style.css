@@ -210,6 +210,8 @@ button {
     color: black;
     font-weight: bold;
     display:inline-block;
+    background-color: transparent;
+
 }
 
 .header_wrapper .nav-item .nav-link::after {
@@ -221,6 +223,7 @@ button {
     background:  rgb(19, 41, 65);
     transition: 0.3s;
     bottom: 0;
+    
 }
 
 .header_wrapper .nav-item .nav-link.active::after,
@@ -256,7 +259,6 @@ button {
     width: 100%;
     height: auto;
     min-height: 650px;
-    /* background-color: #091020; */
     background-image: url(https://res.cloudinary.com/vetswhocode/image/upload/f_auto,q_auto/v1678667459/website-images/vetswhocode-background.jpg);
     background-repeat: no-repeat;
     background-position: center center;
@@ -591,6 +593,9 @@ button {
     /* portfolio */
     .portfolio_wrapper .card {
         min-height: 500px;
+    }
+    .header_wrapper .nav-item .nav-link {
+        color: white;
     }
 } 
 
