@@ -83,7 +83,7 @@
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-5 mb-4 mb-lg-0">
-                    <img decoding="async" src="https://media.istockphoto.com/id/1388635225/photo/businessman-click-on-skills.jpg?s=612x612&w=0&k=20&c=lsCABr8nyaj9E2gFnAuo5V0V_JnGz4d43IZVheP7eoo=" class="img-fluid rounded-3" alt="About Us">
+                    <img decoding="async" src="img/IMG-20240322-WA0003-removebg-preview.png" height="10vh" width="50%" class="img-fluid rounded-3" alt="About Us" style="filter: grayscale(10);">
                 </div>
                 <div class="col-lg-7 ps-lg-5 text-center text-lg-start">
                     <div class="my-3 my-lg-0">
@@ -413,21 +413,22 @@
                             <a href="mailto:example@gmail.com">irbazahmeds20@gamil.com</a>
                         </div>
                     </div> 
-                    <form>
-                        <div class="mb-4">
-                            <input type="text" class="form-control" placeholder="Your Name..." autocomplete="off">
+                    <form id="form">
+                      <div class="mb-4">
+                          <input type="text" name="from_name" id="from_name" placeholder="Your Name..." class="form-control">
                         </div>
                         <div class="mb-4">
-                            <input type="number" class="form-control" placeholder="Your Phone..." autocomplete="off">
+                          <input type="text" name="phone_input" id="phone_input" class="form-control" placeholder="Your Phone..." >
                         </div>
                         <div class="mb-4">
-                            <input id="mail" type="email" class="form-control" placeholder="Your Email..." autocomplete="off">
+                          <input type="text" name="email_Id" id="email_Id"  class="form-control" placeholder="Your Email...">
                         </div>
                         <div class="mb-4">
-                            <input cols="40" rows="4" class="form-control" id="message"
-                                placeholder="Write a Message..." autocomplete="off">
+                          <input type="text" name="message" id="message" class="form-control" id="message"
+                          placeholder="Write a Message...">
                         </div>
-                        <button id="submit" type="submit" class="main-btn">Submit</button>
+                        <!-- <input type="submit" id="button" value="Send Email" > -->
+                        <button id="button" type="submit" value="Send Email" class="main-btn">Submit</button>
                     </form>
                 </div>
                 <div class="col-lg-6 order-1 mb-4 order-lg-1 mb-lg-0" style="box-shadow: 1px 1px 1px white;">
@@ -472,16 +473,19 @@
         </div>
     </section>
 
-    <!-- Footer section exit -->
-
-    <!-- Bootstrap 5 JS CDN Links -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     
+    
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-    <!-- Custom Js Link -->
+<script type="text/javascript">
+emailjs.init('gwphgpS1fEprV9qn-')
+</script>
+
     <script src="script.js"></script>
     
 </body>

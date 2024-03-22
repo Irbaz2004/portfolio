@@ -16,15 +16,36 @@ navBar.forEach(function (a){
     })
 })
  
-let submit=document.getElementById("submit");
-let input= document.getElementById("mail")
-submit.addEventListener("click",()=>{
-    if (input.value !== "") {
-        alert("Thank You for Contact!")
+// let submit=document.getElementById("submit");
+// let input= document.getElementById("email_Id")
+// submit.addEventListener("click",()=>{
+//     if (input.value !== "") {
+//         alert("Thank You for Contact!")
         
-     } 
-     else{
-        alert("Please fill the details")
-     } 
-})
+//      } 
+//      else{
+//         alert("Please fill the details")
+//      } 
+// })
+
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_p0qfhrg';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
  
